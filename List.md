@@ -30,4 +30,9 @@
 |[28](/source/28.cpp)	|160923	|[UVALive-5113](http://vjudge.net/problem/UVALive-5113)	||
 |[29](/source/29.cpp)	|160923	|[UVALive-5114](http://vjudge.net/problem/UVALive-5114)	||
 |[30](/source/30.cpp)	|160923	|[UVALive-5116](http://vjudge.net/problem/UVALive-5116)	|DFS|
-
+|[31](/source/31.cpp)	|161002	|[HDU-5572](http://vjudge.net/problem/HDU-5572)	|Geometry|
+|[32](/source/32.cpp)	|161002	|[HDU-5540](http://vjudge.net/problem/HDU-5540)	|Contest|
+|[33](/source/33.cpp)	|161002	|[HDU-5542](http://vjudge.net/problem/HDU-5542)	|Contest, DP, BIT|
+|[34](/source/34.cpp)	|161002	|[HDU-5546](http://vjudge.net/problem/HDU-5546)	|Contest, DFS|
+|[35](/source/35.cpp)	|161002	|[HDU-5547](http://vjudge.net/problem/HDU-5547)	|Contest, DFS|
+|[36](/source/36.cpp)	|161002	|[HDU-5551](http://vjudge.net/problem/HDU-5551)	|Contest|
