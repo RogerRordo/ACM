@@ -39,3 +39,4 @@
 |[37](/source/37.cpp)	|161002	|[URAL-1160](http://vjudge.net/problem/URAL-1160)	|Contest, Disjoinset|
 |[38](/source/38.cpp)	|161002	|[URAL-1162](http://vjudge.net/problem/URAL-1162)	|Contest, SPFA|
 |[39](/source/39.cpp)	|161002	|[URAL-1164](http://vjudge.net/problem/URAL-1164)	|Contest|
+|[40](/source/40.cpp)	|161003	|[URAL-1159](http://vjudge.net/problem/URAL-1159)	|Dichotomy, Geometry|
