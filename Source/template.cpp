@@ -11,6 +11,7 @@
 #include<bitset>
 #define ll long long
 #define tr(i,l,r) for((i)=(l);(i)<=(r);++i)
+#define oo 0x7F7F7F7F
 using namespace std;
 int read()
 {
