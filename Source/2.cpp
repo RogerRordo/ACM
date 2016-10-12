@@ -16,7 +16,7 @@ void init()
 	int i;
 	memset(last,0,sizeof(last));
 	memset(d,0,sizeof(d));
-	memset(a,0,sizeof(jh)*maxn);
+	memset(a,0,sizeof(a));
 	tr(i,1,m)
 	{
 		cin>>a[i].x>>a[i].y;
