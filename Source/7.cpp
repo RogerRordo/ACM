@@ -35,13 +35,9 @@ void update(int x)
 {
 	int e;
 	p[x]=true;
-	e=last[x];
-	while (e>0) 
-	{
+	for(e=last[x];e>0;e=a[e].pre)
 		if (!p[a[e].y] && (!d[a[e].y] || a[e].d+d[x]<d[a[e].y]))
 			d[a[e].y]=a[e].d+d[x];
-		e=a[e].pre;
-	}
 }
 void dijkstra()
 {
