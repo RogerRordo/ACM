@@ -83,6 +83,8 @@ struct circle
     //friend line cross(line a,circle b){}
     //friend line cross(circle a,circle b){}
     //friend line tangent(point a,circle b){}
+    //friend double apart(line a,circle b){}
+    //friend pair<line,line> tangent(circle a,circle b){}
     //friend double crossS(vector<circle>){}
 } ;
 struct triangle//t 因triangle亦属polygon，故省去许多函数
