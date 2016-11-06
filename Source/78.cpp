@@ -1,3 +1,8 @@
+/*
+	Time: 161106
+	Prob: URAL1503
+	By RogerRo
+ */
 #include<cstdio>
 #include<cmath>
 #define tr(i,l,r) for((i)=(l);(i)<=(r);++i)
