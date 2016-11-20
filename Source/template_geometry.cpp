@@ -17,6 +17,7 @@
 #include<bitset>
 #define ll long long
 #define tr(i,l,r) for((i)=(l);(i)<=(r);++i)
+#define rtr(i,r,l) for((i)=(r);(i)>=(l);--i)
 #define oo 0x7F7F7F7F
 #define maxps 10005
 #define nonx 1E30
