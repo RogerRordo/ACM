@@ -1,0 +1,85 @@
+\documentclass[10pt]{article}
+
+% landscape, twocolumn
+\usepackage[a4paper, landscape, twocolumn, twoside]{geometry}
+% \usepackage[a4paper, top = 0.6in, bottom = 0.3in, left = 0.5in, right = 0.5in, landscape, twocolumn, twoside]{geometry}
+
+\usepackage{calc}
+\setlength{\topmargin}{-1in + 15pt}
+\setlength{\headheight}{12pt}
+\setlength{\headsep}{10pt}
+\setlength{\footskip}{0pt}
+\setlength{\textheight}{\paperheight - 60pt}
+
+\setlength{\oddsidemargin}{-1in + 30pt}
+\setlength{\evensidemargin}{-1in + 30pt}
+\setlength{\textwidth}{\paperwidth - 60pt}
+
+\usepackage[xetex, colorlinks]{hyperref}
+\usepackage{fontspec, xunicode, xltxtra}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+
+
+\setmainfont{AR PL UKai CN}
+
+
+\setlength{\columnsep}{0.4in}
+
+\pagestyle{fancy}
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO,RE]{\bfseries\leftmark}
+\fancyhead[C]{\bfseries RogerRo}
+\fancyfoot{}
+
+% \newfontfamily{\lsttype}{Liberation Mono}
+
+\definecolor{dkgreen}{RGB}{63, 127, 85}
+\definecolor{dkpurple}{RGB}{127, 0, 85}
+\definecolor{dkgrey}{RGB}{127, 127, 127}
+\definecolor{dkred}{RGB}{154, 0, 0}
+\lstset {
+  basicstyle = \small\ttfamily,
+  language = C++,
+  aboveskip = 0pt,
+  numbers = left,
+  numberstyle = \footnotesize\ttfamily\color{dkgrey},
+  numbersep = 5pt,
+  tabsize = 2,
+  breaklines = true,
+  breakindent = 1.1em,
+  keywordstyle = \color{dkpurple},
+  commentstyle = \color{dkgreen},
+  backgroundcolor = \color{white},
+  stringstyle = \color{dkred},
+  deletekeywords = {in},
+  showspaces = false,
+  basewidth = {0.5em, 0.4em},
+  frame = trbl,
+  rulecolor = \color{dkgrey},
+  showstringspaces = false,
+  escapeinside = {<TeX>}{</TeX>}
+}
+
+\begin{document}
+% \title{\LARGE Templates For ACM}
+% \date{}
+% \author{\textbf{RogerRo}}
+% \maketitle
+\tableofcontents
+\newpage
+
+\section{数据结构}
+\subsection{Splay}
+O(n)
+\lstinputlisting{
+/Source/splay.cpp}
+
+
+
+\end{document}
