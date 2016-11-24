@@ -22,11 +22,11 @@
 using namespace std;
 int read()
 {
-    int x=0,f=1;
+    int x=0; bool f=0;
     char ch=getchar();
-    while (ch<'0'||ch>'9') {if (ch=='-') f=-1; ch=getchar();}
-    while (ch>='0'&&ch<='9') {x=x*10+ch-'0'; ch=getchar();}
-    return x*f;
+    while (ch<'0'||ch>'9') {f|=ch=='-'; ch=getchar();}
+    while (ch>='0'&&ch<='9') {x=(x<<3)+(x<<1)+ch-'0'; ch=getchar();}
+    return (x^-f)+f;
 }
 void write(int x)
 {
