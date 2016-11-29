@@ -14,12 +14,11 @@
 \setlength{\textwidth}{\paperwidth - 60pt}
 
 \setlength{\columnsep}{0.4in}
-\usepackage{xeCJK}
-\setsansfont{Source Code Pro}
-
-\setCJKmainfont{Noto Sans CJK JP}
-\setCJKsansfont{Noto Sans CJK JP}
-\setCJKmonofont{Noto Sans CJK JP}
+%\usepackage{xeCJK}
+%\setsansfont{Source Code Pro}
+%\setCJKmainfont{Noto Sans CJK JP}
+%\setCJKsansfont{Noto Sans CJK JP}
+%\setCJKmonofont{Noto Sans CJK JP}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -27,7 +26,6 @@
 \fancyhead[LE,LO]{\bfseries\leftmark}
 \fancyhead[C]{\bfseries RogerRo}
 \fancyfoot{}
-
 
 \usepackage{listings}
 \lstset{
@@ -63,6 +61,7 @@
 \subsubsectionfont{\small}
 
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{booktabs}
 
 \usepackage{indentfirst}
@@ -109,13 +108,15 @@ $O(N^3*S)$，S取决于精度
 %==================================================
 \section{几何}
 \subsection{平面几何类包}
+下面提到皮克公式：$S=I+\frac{B}{2}-1$描述顶点都在格点的多边形面积，$I, B$分别为多边形内、边上格点
 \lstinputlisting{Template/template_geometry.cpp}
-%==================================================
-\section{博弈}
 %==================================================
 \section{DP}
 %==================================================
 \section{串}
+\subsection{最长回文子串-Manacher}
+$O(N)$
+\lstinputlisting{Template/manacher.cpp}
 \subsection{多模匹配-AC自动机}
 求n个模式串中有多少个出现过，模式串相同算作多个，$O(\sum P_i+T)$
 \lstinputlisting{Template/aho_corasick.cpp}
@@ -194,5 +195,33 @@ $O(NlogN)~O(1)$
 \lstinputlisting{Template/st.cpp}
 %==================================================
 \section{其它}
+%==================================================
+\section{纯公式/定理}
+\subsection{数学公式}
+\input{Template/math_formula.tex}
+
+\subsection{几何公式}
+\input{Template/geometry_formula.tex}
+
+\subsection{经典博弈}
+\paragraph{$\blacksquare$ Nim博弈\\}
+问题：$n$堆石子，每次取一堆中$x$个($x>0$)，取完则胜。\\
+奇异态（后手胜）：$a_1~xor~a_2~xor~...~xor~a_n=0$
+\paragraph{$\blacksquare$ Bash博弈\\}
+问题：$n$个石子，每次$x$个($0<x\leq m$)，取完则胜。\\
+奇异态（后手胜）：$n\equiv 0~(mod(m+1))$
+\paragraph{$\blacksquare$ Wythoff博弈\\}
+问题：2堆石子分别$x, y$个($x>y$)，每次取一堆中$x$个($x>0$)，或两堆中分别$x$个($x>0$)，取完则胜。\\
+奇异态（后手胜）：$\left \lfloor \frac{\sqrt{5}+1}{2} (x-y) \right \rfloor =y$
+\paragraph{$\blacksquare$ Fibonacci博弈\\}
+问题：$n$个石子，先手第一次取$x$个($0<x<n$)，之后每次取$x$个($0<x\leq 上一次取数的两倍$)，取完则胜。\\
+奇异态（\textbf{先}手胜）：$n$不是斐波那契数
+
+\subsection{部分质数}
+\noindent
+$100003$, $200003$, $300007$, $400009$, $500009$, $600011$, $700001$, $800011$, $900001$, \\
+$1000003$, $2000003$, $3000017$, $4100011$, $5000011$, $8000009$, $9000011$, \\
+$10000019$, $20000003$, $50000017$, $50100007$, \\
+$100000007$, $100200011$, $200100007$, $250000019$
 %==================================================
 \end{document}

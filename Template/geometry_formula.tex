@@ -1,0 +1,35 @@
+\subsubsection{平面几何}
+\paragraph{$\blacksquare$ 三角形的长度\\}
+中线$m_a=\sqrt{\frac{1}{2} b^2+\frac{1}{2} c^2-\frac{1}{4} a^2}$\\
+高线长$h_a=\frac{2\sqrt{s(s-a)(s-b)(s-c)}}{a}$\\
+角平分线$t_a=\frac{1}{b+c} \sqrt{(b+c+a)(b+c-a)bc}$\\
+外接圆半径$R=\frac{abc}{\sqrt{(a+b+c)(b+c-a)(a+c-b)(a+b-c)}}$\\
+内切圆半径$r=\frac{\sqrt{(a+b+c)(b+c-a)(a+c-b)(a+b-c)}}{2(a+b+c)}$
+\paragraph{$\blacksquare$ 三角形的面积}
+$S=\frac{1}{2} ab\sin C=\frac{a^2\sin B\sin C}{2\sin (B+C)}=\sqrt{p(p-a)(p-b)(p-c)}=\frac{1}{2}\begin{Vmatrix} a_x & a_y & 1\\ b_x & b_y & 1\\ c_x & c_y & 1 \end{Vmatrix}$，其中$p=\frac{a+b+c}{2}$
+\paragraph{$\blacksquare$ 三角形奔驰定理}
+$P$为$\triangle ABC$中一点，且$S_{\triangle PBC} \cdot \overrightarrow{PA}+S_{\triangle PAC} \cdot \overrightarrow{PB}+S_{\triangle PAB} \cdot \overrightarrow{PC}=\vec 0$
+\paragraph{$\blacksquare$ 托勒密定理}
+狭义：凸四边形四点共圆当且仅当其两对对边乘积的和等于两条对角线的乘积\\
+广义：四边形$ABCD$两条对角线长分别为$m, n$，则$m^2 n^2=a^2 c^2+b^2 d^2-2abcd \cos(A+C)$
+\paragraph{$\blacksquare$ 椭圆面积}
+$S=\pi ab$
+\paragraph{$\blacksquare$ 弧微分}
+$\mathrm{d}s=\sqrt{[x'(t)]^2+[y'(t)]^2} \mathrm{d} t=\sqrt{1+[f'(x)]^2} \mathrm{d} x=\sqrt{r^2(\theta)+[r'(\theta)]^2} \mathrm{d} \theta$
+
+\subsubsection{立体几何}
+\paragraph{$\blacksquare$ 凸多面体欧拉公式}
+对任意凸多面体，点、边、面数分别为$V, E, F$，则$V-E+F=2$
+\paragraph{$\blacksquare$ 台体体积}
+$V=\frac{1}{3}h(S_1+\sqrt {S_1S_2}+S_2)$
+\paragraph{$\blacksquare$ 椭球体积}
+$V=\frac{4}{3} \pi abc$（都是半轴）
+\paragraph{$\blacksquare$ 四面体体积\\}
+$V=\frac{1}{6} \begin{Vmatrix} p_x & p_y & p_z\\ q_x & q_y & q_z\\ r_x & r_y & r_z \end{Vmatrix}$，其中$\vec p=\overrightarrow{OA}, \vec q=\overrightarrow{OB}, \vec r=\overrightarrow{OC}$;\\
+$(12V)^2=a^2d^2(b^2+c^2+e^2+f^2-a^2-d^2)+b^2e^2(c^2+a^2+f^2+d^2-b^2-e^2)+c^2f^2(a^2+b^2+d^2+e^2-c^2-f^2)-a^2b^2c^2-a^2e^2f^2-d^2b^2f^2-d^2e^2c^2$，其中$a=AB,b=BC,c=CA,d=OC,e=OA,f=OB$
+\paragraph{$\blacksquare$ 旋转体（一、二象限，绕x轴）}
+体积$V=\pi \int_{a}^{b} f^2(x) \mathrm{d} x$\\
+侧面积$F=2\pi \int f(x) \mathrm{d} s=2\pi \int_{a}^{b} \sqrt{1+[f'(x)]^2} \mathrm{d} x$\\
+%（空心）质心
+%（空心）转动惯量
+%古鲁丁定理
