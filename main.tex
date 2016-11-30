@@ -14,11 +14,11 @@
 \setlength{\textwidth}{\paperwidth - 60pt}
 
 \setlength{\columnsep}{0.4in}
-\usepackage{xeCJK}
-\setsansfont{Source Code Pro}
-\setCJKmainfont{Noto Sans CJK JP}
-\setCJKsansfont{Noto Sans CJK JP}
-\setCJKmonofont{Noto Sans CJK JP}
+%\usepackage{xeCJK}
+%\setsansfont{Source Code Pro}
+%\setCJKmainfont{Noto Sans CJK JP}
+%\setCJKsansfont{Noto Sans CJK JP}
+%\setCJKmonofont{Noto Sans CJK JP}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -211,7 +211,7 @@ $O(NlogN)~O(1)$
 \paragraph{$\blacksquare$ Bash博弈\\}
 \noindent \\
 问题：$n$个石子，每次$x$个($0<x\leq m$)，取完则胜。\\
-奇异态（后手胜）：$n\equiv 0~(mod(m+1))$
+奇异态（后手胜）：$n\equiv 0~(\operatorname{mod}~(m+1))$
 \paragraph{$\blacksquare$ Wythoff博弈\\}
 \noindent \\
 问题：2堆石子分别$x, y$个($x>y$)，每次取一堆中$x$个($x>0$)，或两堆中分别$x$个($x>0$)，取完则胜。\\
