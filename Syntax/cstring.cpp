@@ -27,7 +27,6 @@ char * strtok ( char * str, const char * delimiters );
 //  1.  strrchr的搜索包括\0，所以strrchr(s,0)返回末尾指针
 //  2.  strspn返回str1开头最长连续多少个字符都在str2中出现，strcspn相反意义
 //  3.  strpbrk返回str1中最先出现在str2中的字符的指针
-//  4.  strtok通过delimitters字符集分割str（不包含那些字符），每次取一个分割出的子串用
-//      p=strtok(NULL,delimiters)，直到p为NULL
+//  4.  strtok通过delimitters字符集分割str（不包含那些字符），每次取一个分割出的子串用p=strtok(NULL,delimiters)，直到p为NULL
 //-----------------------------------其它-----------------------------------
 size_t strlen ( const char * str );
