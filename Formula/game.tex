@@ -1,0 +1,16 @@
+\paragraph{$\blacksquare$ Nim博弈\\}
+\noindent \\
+问题：$n$堆石子，每次取一堆中$x$个($x>0$)，取完则胜。\\
+奇异态（后手胜）：$a_1~xor~a_2~xor~...~xor~a_n=0$
+\paragraph{$\blacksquare$ Bash博弈\\}
+\noindent \\
+问题：$n$个石子，每次$x$个($0<x\leq m$)，取完则胜。\\
+奇异态（后手胜）：$n\equiv 0~(\operatorname{mod}~(m+1))$
+\paragraph{$\blacksquare$ Wythoff博弈\\}
+\noindent \\
+问题：2堆石子分别$x, y$个($x>y$)，每次取一堆中$x$个($x>0$)，或两堆中分别$x$个($x>0$)，取完则胜。\\
+奇异态（后手胜）：$\left \lfloor \frac{\sqrt{5}+1}{2} (x-y) \right \rfloor =y$
+\paragraph{$\blacksquare$ Fibonacci博弈\\}
+\noindent \\
+问题：$n$个石子，先手第一次取$x$个($0<x<n$)，之后每次取$x$个($0<x\leq$上一次取数的两倍)，取完则胜。\\
+奇异态（\textbf{先}手胜）：$n$不是斐波那契数

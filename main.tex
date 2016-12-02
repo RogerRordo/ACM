@@ -95,6 +95,9 @@
 \lstinputlisting{Template/vimrc}
 %==================================================
 \section{数学}
+\subsection{分数类}
+\lstinputlisting{Template/template_fraction.cpp}
+
 \subsection{高精度类}
 \lstinputlisting{Template/template_highprecision.cpp}
 
@@ -198,28 +201,13 @@ $O(NlogN)~O(1)$
 %==================================================
 \section{纯公式/定理}
 \subsection{数学公式}
-\input{Template/math_formula.tex}
+\input{Formula/math.tex}
 
 \subsection{几何公式}
-\input{Template/geometry_formula.tex}
+\input{Formula/geometry.tex}
 
 \subsection{经典博弈}
-\paragraph{$\blacksquare$ Nim博弈\\}
-\noindent \\
-问题：$n$堆石子，每次取一堆中$x$个($x>0$)，取完则胜。\\
-奇异态（后手胜）：$a_1~xor~a_2~xor~...~xor~a_n=0$
-\paragraph{$\blacksquare$ Bash博弈\\}
-\noindent \\
-问题：$n$个石子，每次$x$个($0<x\leq m$)，取完则胜。\\
-奇异态（后手胜）：$n\equiv 0~(\operatorname{mod}~(m+1))$
-\paragraph{$\blacksquare$ Wythoff博弈\\}
-\noindent \\
-问题：2堆石子分别$x, y$个($x>y$)，每次取一堆中$x$个($x>0$)，或两堆中分别$x$个($x>0$)，取完则胜。\\
-奇异态（后手胜）：$\left \lfloor \frac{\sqrt{5}+1}{2} (x-y) \right \rfloor =y$
-\paragraph{$\blacksquare$ Fibonacci博弈\\}
-\noindent \\
-问题：$n$个石子，先手第一次取$x$个($0<x<n$)，之后每次取$x$个($0<x\leq$上一次取数的两倍)，取完则胜。\\
-奇异态（\textbf{先}手胜）：$n$不是斐波那契数
+\input{Formula/game.tex}
 
 \subsection{部分质数}
 \noindent
@@ -228,4 +216,33 @@ $1000003$, $2000003$, $3000017$, $4100011$, $5000011$, $8000009$, $9000011$, \\
 $10000019$, $20000003$, $50000017$, $50100007$, \\
 $100000007$, $100200011$, $200100007$, $250000019$
 %==================================================
+\section{语法}
+精选部分函数，无特别说明则为98标准
+\subsection{C}
+\subsubsection{<cstdio>}
+\lstinputlisting{Syntax/cstdio.cpp}
+
+\subsubsection{<cctype>}
+\lstinputlisting{Syntax/cctype.cpp}
+
+\subsubsection{<cstring>}
+\lstinputlisting{Syntax/cstring.cpp}
+
+%\subsubsection{<cstdlib>}
+%\lstinputlisting{Syntax/cstdlib.cpp}
+
+%\subsection{C++}
+%\subsubsection{<iostream>/<ios>}
+%\lstinputlisting{Syntax/iostream.cpp}
+%\subsubsection{Containers}
+%\lstinputlisting{Syntax/containers.cpp}
+%\subsubsection{<string>}
+%\lstinputlisting{Syntax/string.cpp}
+%\subsubsection{<algorithm>}
+%\lstinputlisting{Syntax/algorithm.cpp}
+%\subsubsection{<bitset>}
+%\lstinputlisting{Syntax/bitset.cpp}
+%==================================================
+\section{经典错误}
+=和==混淆；scanf没加&；爆数组/数据范围
 \end{document}
