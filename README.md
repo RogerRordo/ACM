@@ -89,3 +89,5 @@ Solved Problems:
 |[82](/RogerRordo/ACM/tree/master/Source/82.cpp)	|161122	|[POJ-1258](http://vjudge.net/problem/POJ-1258)	|Prim, 堆|
 |[83](/RogerRordo/ACM/tree/master/Source/83.cpp)	|161129	|[POJ-3974](http://vjudge.net/problem/POJ-3974)	|最长回文子串, Manacher|
 |[84](/RogerRordo/ACM/tree/master/Source/84.cpp)	|161203	|[URAL-1274](http://vjudge.net/problem/URAL-1274)	|分数类|
+|[85](/RogerRordo/ACM/tree/master/Source/85.cpp)	|161203	|[URAL-1512](http://vjudge.net/problem/URAL-1512)	|比赛, n皇后问题, 构造|
+|[86](/RogerRordo/ACM/tree/master/Source/86.cpp)	|161203	|[URAL-1521](http://vjudge.net/problem/URAL-1521)	|比赛, Treap, 约瑟夫问题|
