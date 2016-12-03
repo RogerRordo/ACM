@@ -33,6 +33,10 @@ struct frac
 		return res;
 	}
 	
+    bool friend operator==(frac a,frac b){a.adjust();b.adjust();return a.x==b.x&&a.y==b.y;}
+    bool friend operator!=(frac a,frac b){a.adjust();b.adjust();return !(a.x==b.x&&a.y==b.y);}
+    bool friend operator>(frac a,frac b){if(a.x*b.x<=0)return a.x>b.x;return a.x*b.y>b.x*a.y;}
+    bool friend operator<(frac a,frac b){if(a.x*b.x<=0)return a.x<b.x;return a.x*b.y<b.x*a.y;}
 	frac friend operator+(frac a,frac b){return frac(a.x*b.y+a.y*b.x,a.y*b.y).adjust();}
 	frac friend operator-(frac a,frac b){return frac(a.x*b.y-a.y*b.x,a.y*b.y).adjust();}
 	frac friend operator*(frac a,frac b){return frac(a.x*b.x,a.y*b.y).adjust();}
