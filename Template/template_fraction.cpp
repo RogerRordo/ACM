@@ -1,4 +1,4 @@
-int gcd(int x,int y){return x%y?gcd(y,x%y):y;}
+int gcd(int x,int y){return y?gcd(y,x%y):x;}
 struct frac
 {
 	int x,y;	//分子x，分母y，符号放在x
