@@ -1,29 +1,7 @@
-/*
-	Time:
-	Prob:
-	By RogerRo
- */
-#include<iostream>
-#include<cstdio>
-#include<cstdlib>
-#include<cstring>
-#include<vector>
-#include<queue>
-#include<set>
-#include<map>
-#include<cmath>
-#include<algorithm>
-#include<ctime>
-#include<bitset>
-#define ll long long
-#define tr(i,l,r) for((i)=(l);(i)<=(r);++i)
-#define rtr(i,r,l) for((i)=(r);(i)>=(l);--i)
-#define oo 0x7F7F7F7F
 #define maxpn 100010
 #define nonx 1E100
 #define eps 1E-8
 const double pi=acos(-1.0);
-using namespace std;
 //===========================================================
 int cmp(double x)
 {
@@ -49,6 +27,7 @@ struct point
     friend point operator/(point a,double b){return point(a.x/b,a.y/b);}
     friend double operator^(point a,point b){return a.x*b.y-a.y*b.x;}
     friend bool operator==(point a,point b){return cmp(a.x-b.x)==0&&cmp(a.y-b.y)==0;}
+    friend bool operator!=(point a,point b){return cmp(a.x-b.x)!=0||cmp(a.y-b.y)!=0;}
 } ;
 const point nonp=point(nonx,nonx);
 struct line
@@ -223,27 +202,4 @@ circle mincovercircle(polygon a) //最小圆覆盖 O(n)
     for(k=1,t=circle((a[i]+a[j])/2,len(a[i]-a[j])/2);k<j;k++) if (!in(a[k],t))
     t=outcircle(triangle(a[i],a[j],a[k]));
     return t;
-}
-//===========================================================
-int read()
-{
-    int x=0; bool f=0;
-    char ch=getchar();
-    while (ch<'0'||ch>'9') {f|=ch=='-'; ch=getchar();}
-    while (ch>='0'&&ch<='9') {x=(x<<3)+(x<<1)+ch-'0'; ch=getchar();}
-    return (x^-f)+f;
-}
-void write(int x)
-{
-    char a[20],s=0;
-    if (x==0){putchar('0'); return ;}
-    if (x<0) {putchar('-'); x=-x;}
-    while (x) {a[s++]=x%10+'0'; x=x/10;}
-    while (s--) putchar(a[s]);
-}
-void writeln(int x){write(x); putchar('\n');}
-int main()
-{
-
-	return 0;
 }

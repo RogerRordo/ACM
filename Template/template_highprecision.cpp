@@ -1,8 +1,7 @@
 //要sqrt就一定要len和dcm是偶数
 //不可以出现如big x=y;的东西，必须分开成big x;x=y;
 #define len 3000
-#define dcm 3000
-void carry(int*x,int y){*(x-1)+=((*x+=y)+10000)/10-1000;*x=(*x+10000)%10;}
+#define dcm 2000
 struct big
 {
     int _[len+2];
@@ -27,71 +26,71 @@ struct big
         tr(k,l,r){if(k==dcm+1)s[i++]='.';s[i++]=_[k]+'0';}
         s[i]=0; return s;
     }
-    
-    friend int comp(big x,big y) //O(len)
-    {
-        int i;
-        tr(i,1,len) if (x[i]!=y[i]) break;
-        return i>len?0:(x[i]>y[i]?1:-1);
-    }
-    friend big operator+(big x,big y) //O(len)
-    {
-        big z; int i;
-        rtr(i,len,1) carry(&z[i],x[i]+y[i]);
-        return z;
-    }
-    friend big operator-(big x,big y) //O(len)
-    {
-        big z; int i;
-        rtr(i,len,1) carry(&z[i],x[i]-y[i]);
-        return z;
-    }
-    friend big operator*(big x,big y) //O(len^2)
-    {
-        big z; int i,j;
-        rtr(i,len,1) rtr(j,min(dcm+len-i,len),max(dcm+1-i,1))
-            carry(&z[i+j-dcm],x[i]*y[j]);
-        return z;
-    }
-    friend big operator/(big x,big y) //O(len^2)
-    {
-        big z,t,tmp[10]; int i,j,k;
-        tr(k,1,9) tmp[k]=tmp[k-1]+y;
-        tr(j,1,len-dcm) t[j+dcm]=x[j];
-        j--;
-        tr(i,1,len)
-        {
-            tr(k,1,len-1) t[k]=t[k+1];
-            t[len]=++j<=len?x[j]:0;
-            tr(k,1,9) if (comp(tmp[k],t)>0) break;
-            z[i]=--k;
-            t=t-tmp[k];
-        }
-        return z;
-    }
-    friend int sqrt_deal(big&y,int a,int b,int l)
-    {
-        int t=a+y[b]%10-9;
-        if(2*b>l)t-=(y[2*b-l])/10;
-        if (b>=0&&!(a=sqrt_deal(y,t/10,b-1,l))) y[b]+=(t+999)%10-y[b]%10;
-        return a;
-    }
-    friend big sqrt(big x) //O(len^2)
-    {
-        int l,t=dcm/2; big y,z; y=x;
-        for(l=1;l<=len;l++)
-        {
-            y[++l]+=10;
-            while (!sqrt_deal(y,0,l,l)) y[l]+=20;
-            z[++t]=y[l]/20; y[l]-=10;
-        }
-        return z;
-    }
-    friend big floor(big x)
-    {
-        big z; z=x; int i;
-        tr(i,dcm+1,len) z[i]=0;
-        return z;
-    }
-    friend big ceil(big x){return comp(x,floor(x))==0?x:floor(x+big("1"));}
 };
+void carry(int*x,int y){*(x-1)+=((*x+=y)+10000)/10-1000;*x=(*x+10000)%10;}
+int comp(big x,big y) //O(len)
+{
+    int i;
+    tr(i,1,len) if (x[i]!=y[i]) break;
+    return i>len?0:(x[i]>y[i]?1:-1);
+}
+big operator+(big x,big y) //O(len)
+{
+    big z; int i;
+    rtr(i,len,1) carry(&z[i],x[i]+y[i]);
+    return z;
+}
+big operator-(big x,big y) //O(len)
+{
+    big z; int i;
+    rtr(i,len,1) carry(&z[i],x[i]-y[i]);
+    return z;
+}
+big operator*(big x,big y) //O(len^2)
+{
+    big z; int i,j;
+    rtr(i,len,1) rtr(j,min(dcm+len-i,len),max(dcm+1-i,1))
+        carry(&z[i+j-dcm],x[i]*y[j]);
+    return z;
+}
+big operator/(big x,big y) //O(len^2)
+{
+    big z,t,tmp[10]; int i,j,k;
+    tr(k,1,9) tmp[k]=tmp[k-1]+y;
+    tr(j,1,len-dcm) t[j+dcm]=x[j];
+    j--;
+    tr(i,1,len)
+    {
+        tr(k,1,len-1) t[k]=t[k+1];
+        t[len]=++j<=len?x[j]:0;
+        tr(k,1,9) if (comp(tmp[k],t)>0) break;
+        z[i]=--k;
+        t=t-tmp[k];
+    }
+    return z;
+}
+int sqrt_deal(big&y,int a,int b,int l)
+{
+    int t=a+y[b]%10-9;
+    if(2*b>l)t-=(y[2*b-l])/10;
+    if (b>=0&&!(a=sqrt_deal(y,t/10,b-1,l))) y[b]+=(t+999)%10-y[b]%10;
+    return a;
+}
+big sqrt(big x) //O(len^2)
+{
+    int l,t=dcm/2; big y,z; y=x;
+    for(l=1;l<=len;l++)
+    {
+        y[++l]+=10;
+        while (!sqrt_deal(y,0,l,l)) y[l]+=20;
+        z[++t]=y[l]/20; y[l]-=10;
+    }
+    return z;
+}
+big floor(big x)
+{
+    big z; z=x; int i;
+    tr(i,dcm+1,len) z[i]=0;
+    return z;
+}
+big ceil(big x){return comp(x,floor(x))==0?x:floor(x+big("1"));}

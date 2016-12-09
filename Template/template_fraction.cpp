@@ -1,7 +1,7 @@
 int gcd(int x,int y){return y?gcd(y,x%y):x;}
 struct frac
 {
-	int x,y;	//分子x，分母y，符号放在x
+	int x,y;	//符号放在x
 	frac adjust()
 	{
 		if (!y) {x=0; return *this;}
@@ -32,15 +32,14 @@ struct frac
 		if (y!=1) {sprintf(t,"/%d",y); strcat(res,t);}
 		return res;
 	}
-	
-    bool friend operator==(frac a,frac b){a.adjust();b.adjust();return a.x==b.x&&a.y==b.y;}
-    bool friend operator!=(frac a,frac b){a.adjust();b.adjust();return !(a.x==b.x&&a.y==b.y);}
-    bool friend operator>(frac a,frac b){if(a.x*b.x<=0)return a.x>b.x;return a.x*b.y>b.x*a.y;}
-    bool friend operator<(frac a,frac b){if(a.x*b.x<=0)return a.x<b.x;return a.x*b.y<b.x*a.y;}
-	frac friend operator+(frac a,frac b){return frac(a.x*b.y+a.y*b.x,a.y*b.y).adjust();}
-	frac friend operator-(frac a,frac b){return frac(a.x*b.y-a.y*b.x,a.y*b.y).adjust();}
-	frac friend operator*(frac a,frac b){return frac(a.x*b.x,a.y*b.y).adjust();}
-	frac friend operator/(frac a,frac b){return frac(a.x*b.y,a.y*b.x).adjust();}
 };
+bool operator==(frac a,frac b){a.adjust();b.adjust();return a.x==b.x&&a.y==b.y;}
+bool operator!=(frac a,frac b){a.adjust();b.adjust();return !(a.x==b.x&&a.y==b.y);}
+bool operator>(frac a,frac b){if(a.x*b.x<=0)return a.x>b.x;return a.x*b.y>b.x*a.y;}
+bool operator<(frac a,frac b){if(a.x*b.x<=0)return a.x<b.x;return a.x*b.y<b.x*a.y;}
+frac operator+(frac a,frac b){return frac(a.x*b.y+a.y*b.x,a.y*b.y).adjust();}
+frac operator-(frac a,frac b){return frac(a.x*b.y-a.y*b.x,a.y*b.y).adjust();}
+frac operator*(frac a,frac b){return frac(a.x*b.x,a.y*b.y).adjust();}
+frac operator/(frac a,frac b){return frac(a.x*b.y,a.y*b.x).adjust();}
 const frac nonfrac=frac(0,0);
 const frac zerofrac=frac(0,1);
