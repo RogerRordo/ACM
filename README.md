@@ -92,3 +92,8 @@ Solved Problems:
 |[85](/RogerRordo/ACM/tree/master/Source/85.cpp)	|161203	|[URAL-1512](http://vjudge.net/problem/URAL-1512)	|比赛, n皇后问题, 构造|
 |[86](/RogerRordo/ACM/tree/master/Source/86.cpp)	|161203	|[URAL-1521](http://vjudge.net/problem/URAL-1521)	|比赛, Treap, 约瑟夫问题|
 |[87](/RogerRordo/ACM/tree/master/Source/87.cpp)	|161205	|[ZOJ-2107](http://vjudge.net/problem/ZOJ-2107)	|几何, 最近点对|
+|[88](/RogerRordo/ACM/tree/master/Source/88.cpp)	|161210	|[UVA-12703](http://vjudge.net/problem/UVA-12703)	|比赛|
+|[89](/RogerRordo/ACM/tree/master/Source/89.cpp)	|161210	|[UVA-12704](http://vjudge.net/problem/UVA-12704)	|比赛|
+|[90](/RogerRordo/ACM/tree/master/Source/90.cpp)	|161210	|[UVA-12705](http://vjudge.net/problem/UVA-12705)	|比赛|
+|[91](/RogerRordo/ACM/tree/master/Source/91.cpp)	|161210	|[UVA-12707](http://vjudge.net/problem/UVA-12707)	|比赛, 贪心|
+|[92](/RogerRordo/ACM/tree/master/Source/92.cpp)	|161210	|[UVA-12708](http://vjudge.net/problem/UVA-12708)	|比赛|
