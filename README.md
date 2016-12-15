@@ -97,3 +97,8 @@ Solved Problems:
 |[90](/RogerRordo/ACM/tree/master/Source/90.cpp)	|161210	|[UVA-12705](http://vjudge.net/problem/UVA-12705)	|比赛|
 |[91](/RogerRordo/ACM/tree/master/Source/91.cpp)	|161210	|[UVA-12707](http://vjudge.net/problem/UVA-12707)	|比赛, 贪心|
 |[92](/RogerRordo/ACM/tree/master/Source/92.cpp)	|161210	|[UVA-12708](http://vjudge.net/problem/UVA-12708)	|比赛|
+|[93](/RogerRordo/ACM/tree/master/Source/93.cpp)	|161212	|[URAL-1521](http://vjudge.net/problem/URAL-1521)	|约瑟夫问题, pb_ds|
+|[94](/RogerRordo/ACM/tree/master/Source/94.cpp)	|161214	|[CodeForces-743A](http://vjudge.net/problem/CodeForces-743A)	|比赛|
+|[95](/RogerRordo/ACM/tree/master/Source/95.cpp)	|161214	|[CodeForces-743B](http://vjudge.net/problem/CodeForces-743B)	|比赛|
+|[96](/RogerRordo/ACM/tree/master/Source/96.cpp)	|161214	|[CodeForces-743C](http://vjudge.net/problem/CodeForces-743C)	|比赛|
+|[97](/RogerRordo/ACM/tree/master/Source/97.cpp)	|161214	|[CodeForces-743D](http://vjudge.net/problem/CodeForces-743D)	|比赛, DFS|
