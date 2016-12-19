@@ -102,4 +102,4 @@ Solved Problems:
 |[95](/RogerRordo/ACM/tree/master/Source/95.cpp)	|161214	|[CodeForces-743B](http://vjudge.net/problem/CodeForces-743B)	|比赛|
 |[96](/RogerRordo/ACM/tree/master/Source/96.cpp)	|161214	|[CodeForces-743C](http://vjudge.net/problem/CodeForces-743C)	|比赛|
 |[97](/RogerRordo/ACM/tree/master/Source/97.cpp)	|161214	|[CodeForces-743D](http://vjudge.net/problem/CodeForces-743D)	|比赛, DFS|
-|[98](/RogerRordo/ACM/tree/master/Source/98.cpp)	|161219	|[Petrozavodsk Winter-2014. U of Latvia Contest - G]	|没道理A, 贪心|
+|[98](/RogerRordo/ACM/tree/master/Source/98.cpp)	|161219	|Petrozavodsk Winter-2014. U of Latvia Contest - G	|没道理A, 贪心|
