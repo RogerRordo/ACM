@@ -103,3 +103,6 @@ Solved Problems:
 |[96](/RogerRordo/ACM/tree/master/Source/96.cpp)	|161214	|[CodeForces-743C](http://vjudge.net/problem/CodeForces-743C)	|比赛|
 |[97](/RogerRordo/ACM/tree/master/Source/97.cpp)	|161214	|[CodeForces-743D](http://vjudge.net/problem/CodeForces-743D)	|比赛, DFS|
 |[98](/RogerRordo/ACM/tree/master/Source/98.cpp)	|161219	|Petrozavodsk Winter-2014. U of Latvia Contest - G	|没道理A, 贪心|
+|[99](/RogerRordo/ACM/tree/master/Source/99.cpp)	|161220	|[CodeForces-749A](http://vjudge.net/problem/CodeForces-749A)	|比赛|
+|[100](/RogerRordo/ACM/tree/master/Source/100.cpp)	|161220	|[CodeForces-749B](http://vjudge.net/problem/CodeForces-749B)	|比赛|
+|[101](/RogerRordo/ACM/tree/master/Source/101.cpp)	|161220	|[CodeForces-749C](http://vjudge.net/problem/CodeForces-749C)	|比赛, 贪心|
