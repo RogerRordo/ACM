@@ -1,4 +1,4 @@
-#define maxpn 100010
+#define maxpn 20//100010
 #define nonx 1E100
 #define eps 1E-8
 const double pi=acos(-1.0);
@@ -119,21 +119,21 @@ circle incircle(triangle a)  //内切圆
 point gc(triangle a){return (a.a+a.b+a.c)/3;}    //重心
 point hc(triangle a){return 3*gc(a)-2*outcircle(a).o;}   //垂心
 //===========================================================
-double S(polygon a)  //面积 O(n)
+double S(polygon&a)  //面积 O(n)
 {
     int i; double res=0;
     a[a.n+1]=a[1];
     tr(i,1,a.n) res+=a[i]^a[i+1];
     return res/2;
 }
-double C(polygon a) //周长 O(n)
+double C(polygon&a) //周长 O(n)
 {
     int i; double res=0;
     a[a.n+1]=a[1];
     tr(i,1,a.n) res+=len(a[i+1]-a[i]);
     return res;
 }
-int in(point a,polygon b)  //点与多边形位置关系 0外 1内 2上 O(n)
+int in(point a,polygon&b)  //点与多边形位置关系 0外 1内 2上 O(n)
 {
     int s=0,i,d1,d2,k;
     b[b.n+1]=b[1];
@@ -147,7 +147,7 @@ int in(point a,polygon b)  //点与多边形位置关系 0外 1内 2上 O(n)
     }
     return s!=0;
 }
-point gc(polygon a)  //重心 O(n)
+point gc(polygon&a)  //重心 O(n)
 {
     double s=S(a); point t(0,0); int i;
     if (cmp(s)==0) return nonp;
@@ -155,14 +155,14 @@ point gc(polygon a)  //重心 O(n)
     tr(i,1,a.n) t=t+(a[i]+a[i+1])*(a[i]^a[i+1]);
     return t/s/6;
 }
-int pick_on(polygon a)  //皮克求边上格点数 O(n)
+int pick_on(polygon&a)  //皮克求边上格点数 O(n)
 {
     int s=0,i;
     a[a.n+1]=a[1];
     tr(i,1,a.n) s+=gcd(abs(int(a[i+1].x-a[i].x)),abs(int(a[i+1].y-a[i].y)));
     return s;
 }
-int pick_in(polygon a){return int(S(a))+1-pick_on(a)/2;} //皮克求多边形内格点数 O(n)
+int pick_in(polygon&a){return int(S(a))+1-pick_on(a)/2;} //皮克求多边形内格点数 O(n)
 
 bool __cmpx(point a,point b){return cmp(a.x-b.x)<0;}
 bool __cmpy(point a,point b){return cmp(a.y-b.y)<0;}
@@ -179,20 +179,36 @@ double __mindist(point *a,int l,int r)
     sort(a+tl+1,a+tr+1,__cmpx);
     return ans;
 }
-double mindist(polygon a) //a只是点集 O(nlogn)
+double mindist(polygon&a) //a只是点集 O(nlogn)
 {
     sort(a.a+1,a.a+a.n+1,__cmpx);
     return __mindist(a.a,1,a.n);
 }
 //line convex_maxdist(polygon a){}
-//polygon convex_hull(polygon a) //a只是点集 O(nlogn)
-//{
-//}
+bool __cmpconvex(point a,point b){return cmp(a.x-b.x)<0||(cmp(a.x-b.x)==0&&cmp(a.y-b.y)<0);}
+void convex_hull(polygon&a,polygon&b) //a只是点集 O(nlogn)
+{
+    int i,t;
+    sort(a.a+1,a.a+a.n+1,__cmpconvex);
+    b.n=0;
+    tr(i,1,a.n)
+    {
+        while (b.n>=2&&cmp((b[b.n]-b[b.n-1])^(a[i]-b[b.n-1]))<=0) b.n--;
+        b[++b.n]=a[i];
+    }
+    t=b.n;
+    rtr(i,a.n-1,1)
+    {
+        while (b.n>t&&cmp((b[b.n]-b[b.n-1])^(a[i]-b[b.n-1]))<=0) b.n--;
+        b[++b.n]=a[i];
+    }
+    b.n--;
+}
 //int convex_in(point a,polygon b){} //0外 1内 2上 O(logn)
 //polygon cross(polygon a,polygon b){}
 //polygon cross(line a,polygon b){}
 //double unionS(circle a,polygon b){}
-circle mincovercircle(polygon a) //最小圆覆盖 O(n)
+circle mincovercircle(polygon&a) //最小圆覆盖 O(n)
 {
     circle t; int i,j,k;
     srand(time(0));

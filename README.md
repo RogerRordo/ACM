@@ -106,3 +106,5 @@ Solved Problems:
 |[99](/Source/99.cpp)	|161220	|[CodeForces-749A](http://vjudge.net/problem/CodeForces-749A)	|比赛|
 |[100](/Source/100.cpp)	|161220	|[CodeForces-749B](http://vjudge.net/problem/CodeForces-749B)	|比赛|
 |[101](/Source/101.cpp)	|161220	|[CodeForces-749C](http://vjudge.net/problem/CodeForces-749C)	|比赛, 贪心|
+|[102](/Source/102.cpp)	|161220	|[CodeForces-749E](http://vjudge.net/problem/CodeForces-749E)	|数学, 树状数组|
+|[103](/Source/103.cpp)	|161221	|Petrozavodsk Winter-2014. U of Latvia Contest - E	|凸包|
