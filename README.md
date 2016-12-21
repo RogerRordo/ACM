@@ -108,4 +108,3 @@ Solved Problems:
 |[101](/Source/101.cpp)	|161220	|[CodeForces-749C](http://vjudge.net/problem/CodeForces-749C)	|比赛, 贪心|
 |[102](/Source/102.cpp)	|161220	|[CodeForces-749E](http://vjudge.net/problem/CodeForces-749E)	|数学, 树状数组|
 |[103](/Source/103.cpp)	|161221	|Petrozavodsk Winter-2014. U of Latvia Contest - E	|凸包|
-|[104](/Source/104.cpp)	|161221	|[CodeForces-749D](http://vjudge.net/problem/CodeForces-749D)	|堆, 二分|
