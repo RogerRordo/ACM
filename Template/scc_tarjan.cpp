@@ -9,11 +9,20 @@ void tarjan(int x)
     sta[++ss]=x; insta[x]=1;
     for(e=ah[x];e>-1;e=a[e].pre)
     {
-        if (!dfn[y=a[e].y]) tarjan(y);
-        if (insta[y]) low[x]=min(low[x],low[y]);
+        if (!dfn[y=a[e].y])
+        {
+            tarjan(y);
+            low[x]=min(low[x],low[y]);
+        }
+        else if (insta[y]) low[x]=min(low[x],dfn[y]);
     }
     if (low[x]==dfn[x])
-        for(gs++,t=0;t!=x;t=sta[ss--]) {group[sta[ss]]=gs; size[gs]++;}
+        for(gs++,t=0;t!=x;t=sta[ss--])
+        {
+            group[sta[ss]]=gs;
+            size[gs]++;
+            insta[sta[ss]]=0;
+        }
 }
 void work()
 {
