@@ -109,3 +109,10 @@ Solved Problems:
 |[102](/Source/102.cpp)	|161220	|[CodeForces-749E](http://vjudge.net/problem/CodeForces-749E)	|数学, 树状数组|
 |[103](/Source/103.cpp)	|161221	|Petrozavodsk Winter-2014. U of Latvia Contest - E	|凸包|
 |[104](/Source/104.cpp)	|161221	|[CodeForces-749D](http://vjudge.net/problem/CodeForces-749D)	|堆, 二分|
+|[105](/Source/105.cpp)	|161221	|[POJ-2528](http://vjudge.net/problem/POJ-2528)	|堆, 离散化|
+|[106](/Source/106.cpp)	|161221	|[SOJ-13296](http://soj.sysu.edu.cn/13296)	||
+|[107](/Source/107.cpp)	|161223	|[SOJ-13294](http://soj.sysu.edu.cn/13294)	|数学|
+|[108](/Source/108.cpp)	|161223	|[CodeForces-747A](http://vjudge.net/problem/CodeForces-747A)	|比赛|
+|[109](/Source/109.cpp)	|161223	|[CodeForces-747B](http://vjudge.net/problem/CodeForces-747B)	|比赛|
+|[110](/Source/110.cpp)	|161223	|[CodeForces-747C](http://vjudge.net/problem/CodeForces-747C)	|比赛|
+|[111](/Source/111.cpp)	|161223	|[CodeForces-747E](http://vjudge.net/problem/CodeForces-747E)	|比赛|
