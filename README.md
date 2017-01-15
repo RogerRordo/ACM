@@ -116,5 +116,6 @@ Solved Problems:
 |[109](/Source/109.cpp)	|161223	|[CodeForces-747B](http://vjudge.net/problem/CodeForces-747B)	|比赛|
 |[110](/Source/110.cpp)	|161223	|[CodeForces-747C](http://vjudge.net/problem/CodeForces-747C)	|比赛|
 |[111](/Source/111.cpp)	|161223	|[CodeForces-747E](http://vjudge.net/problem/CodeForces-747E)	|比赛|
-|[112](/Source/112.cpp)	|170115	|[URAL-1974](http://vjudge.net/problem/URAL-1974)	|比赛|
-|[113](/Source/113.cpp)	|170115	|[URAL-1979](http://vjudge.net/problem/URAL-1979)	|比赛, 构造|
+|[112](/Source/112.cpp)	|170115	|[URAL-1974](http://vjudge.net/problem/URAL-1974)	||
+|[113](/Source/113.cpp)	|170115	|[URAL-1979](http://vjudge.net/problem/URAL-1979)	|构造|
+|[114](/Source/114.cpp)	|170115	|[URAL-1966](http://vjudge.net/problem/URAL-1966)	|几何, 并查集|
