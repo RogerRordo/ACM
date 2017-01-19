@@ -127,3 +127,4 @@ Solved Problems:
 |[120](/Source/120.cpp)	|170117	|[URAL-1943](http://vjudge.net/problem/URAL-1943)	||
 |[121](/Source/121.cpp)	|170117	|[URAL-1944](http://vjudge.net/problem/URAL-1944)	|比赛|
 |[122](/Source/122.cpp)	|170119	|[URAL-1947](http://vjudge.net/problem/URAL-1947)	|FJH|
+|[123](/Source/123.cpp)	|170119	|[Gym-100801F](http://vjudge.net/problem/Gym-100801F)	|高斯消元|
