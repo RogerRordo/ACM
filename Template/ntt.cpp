@@ -17,7 +17,7 @@ void ntt(int *a,int n,int f)
 			}
 	if(f)
 	{
-		t=pow(n,P-2);
+		t=pow(n,P-2,P);
 		tr(i,0,n-1) a[i]=1LL*a[i]*t%P;
 	}
 }
@@ -29,8 +29,8 @@ void mul(int na,int *a,int nb,int *b,int &nc)	//a=a*b
 	tr(i,na+1,n-1) a[i]=0;
 	tr(i,nb+1,n-1) b[i]=0;
 	tr(i,0,n-1) R[i]=(R[i>>1]>>1)|((i&1)<<(len-1));
-	int v=pow(G,(P-1)/n);
-	int dv=pow(v,P-2);
+	int v=pow(G,(P-1)/n,P);
+	int dv=pow(v,P-2,P);
 	w[0][0]=w[1][0]=1;
 	tr(i,1,n-1)
 	{
