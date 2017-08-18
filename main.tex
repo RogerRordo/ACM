@@ -75,12 +75,12 @@
 \tableofcontents
 \newpage
 %==================================================
-\section{基础/配置/黑科技}
+\section{基础/配置/编译}
 \subsection{一般母版}
 \lstinputlisting{Template/template.cpp}
 
-\subsection{黑科技}
-\lstinputlisting{Template/black_magic.cpp}
+\subsection{编译}
+\lstinputlisting{Template/compile.cpp}
 
 \subsection{位运算}
 \lstinputlisting{Template/bithacks.cpp}
@@ -107,6 +107,18 @@
 \subsection{矩阵类}
 \lstinputlisting{Template/template_matrix.cpp}
 
+\subsection{GCD}
+$O(logN)$
+\lstinputlisting{Template/gcd.cpp}
+
+\subsection{快速乘法}
+$O(logN)$
+\lstinputlisting{Template/mul.cpp}
+
+\subsection{快速幂}
+$O(logM)$
+\lstinputlisting{Template/pow.cpp}
+
 \subsection{筛素数-欧拉筛法}
 $O(N)$
 \lstinputlisting{Template/euler_sieve.cpp}
@@ -118,6 +130,17 @@ $O(N^3)$
 \subsection{高阶代数方程求根-求导}
 $O(N^3*S)$，S取决于精度
 \lstinputlisting{Template/equation.cpp}
+
+\subsection{FFT}
+$O(NlogN)$
+\lstinputlisting{Template/fft.cpp}
+
+\subsection{NTT}
+$O(NlogN)$\\
+费马质数$r\cdot 2^k+1$作模则$N$最大约为$2^k$\\
+$2281701377=17*2^27+1$(平方刚好不爆LL), $1004535809=479*2^21+1, 998244353=119*2^23+1$，原根都是3;\\
+$786433=3*2^18+1$原根是10，$880803841=105*2^23+1$原根是26
+\lstinputlisting{Template/ntt.cpp}
 %==================================================
 \section{几何}
 \subsection{平面几何类包}

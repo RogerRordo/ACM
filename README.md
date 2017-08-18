@@ -129,3 +129,8 @@ Solved Problems:
 |[122](/Source/122.cpp)	|170119	|[URAL-1947](http://vjudge.net/problem/URAL-1947)	|FJH|
 |[123](/Source/123.cpp)	|170119	|[Gym-100801F](http://vjudge.net/problem/Gym-100801F)	|高斯消元|
 |[124](/Source/124.cpp)	|170119	|[URAL-1978](http://vjudge.net/problem/URAL-1978)	|几何|
+|[125](/Source/125.cpp)	|170120	|[CodeForces-758A](http://vjudge.net/problem/CodeForces-758A)	|比赛|
+|[126](/Source/126.cpp)	|170120	|[CodeForces-758B](http://vjudge.net/problem/CodeForces-758B)	|比赛|
+|[127](/Source/127.cpp)	|170120	|[CodeForces-758C](http://vjudge.net/problem/CodeForces-758C)	|比赛|
+|[128](/Source/128.cpp)	|170120	|[CodeForces-758D](http://vjudge.net/problem/CodeForces-758D)	|DP|
+|[129](/Source/129.cpp)	|170120	|[CodeForces-758F](http://vjudge.net/problem/CodeForces-758F)	|数论|
