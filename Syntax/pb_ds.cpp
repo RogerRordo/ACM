@@ -63,7 +63,7 @@ node_iterator node_end ()
 const_node_iterator node_end () const
 //  1.  Mapped设置为null_type（较旧版本为null_mapped_type）变set，即对iterator加星取值
 //  2.  Tag：rb_tree_tag, splay_tree_tag, or ov_tree_tag三种，一般只用rb_tree
-//  3.  Node_Update自带有////
+//  3.  Node_Update自带有tree_order_statistics_node_update，包含find_by_order和order_of_key两个函数，order从0开始，order_of_key找比x严格小的个数
 //----------------------------------哈希----------------------------------
 template<
     typename Key,
