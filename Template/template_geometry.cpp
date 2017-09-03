@@ -92,7 +92,14 @@ line cross(line a,circle b)  //线圆交
     return line(a.a+t.x*a.dir(),a.a+t.y*a.dir());
 }
 int in(point a,circle b){double t=len(a-b.o);return t==b.r?2:t<b.r;} //点与圆位置关系 0外 1内 2上
-//line cross(circle a,circle b){}
+line cross(circle a,circle b)
+{
+    double d=len(a.o-b.o);
+    if (cmp(abs(a.r-b.r)-d)>0||cmp(d-(a.r+b.r))>0) return nonl;
+    double c=acos((sqr(a.r)+sqr(d)-sqr(b.r))/(2.0*a.r*d));
+    point v=(b.o-a.o)/d*a.r;
+    return line(a.o+rotate(v,-c),a.o+rotate(v,c));
+}
 //line tangent(point a,circle b){}
 //pair<line,line> tangent(circle a,circle b){}
 //double unionS(int n,circle*a) //圆面积并

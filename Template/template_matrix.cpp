@@ -7,6 +7,13 @@ struct mat
     int* operator[](int x){return a[x];}
 };
 const mat nonmat(-1,-1);
+mat unit(int n)
+{
+    mat res(n,n);
+    int i,j;
+    tr(i,1,res.n) tr(j,1,res.n) if (i==j) res[i][j]=1; else res[i][j]=0;
+    return res;
+}
 mat operator+(mat&a,mat&b)
 {
     if (a.n!=b.n||a.m!=b.m) return nonmat;
@@ -31,6 +38,18 @@ mat operator*(mat&a,mat&b)
         tr(k,1,a.m) c[i][j]+=a[i][k]*b[k][j];
     }
     return c;
+}
+mat operator^(mat&a,ll b)
+{
+	if (a.n!=a.m) return nonmat;
+    mat res=unit(a.n);
+    while (b)
+    {
+        if (b&1) res=res*a;
+        a=a*a;
+        b>>=1;
+    }
+    return res;
 }
 //===================================================================
 void _as(mat&a,int x1,int y1,mat&b,int x2,int y2,int nn,int mm,bool chnm=0) //assign

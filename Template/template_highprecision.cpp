@@ -69,6 +69,37 @@ big operator/(big x,big y) //O(len^2)
     }
     return z;
 }
+big operator+(big x,int y)	//only dcm=len
+{
+    big z; int i;
+    carry(&z[len],x[len]+y);
+    rtr(i,len-1,1) carry(&z[i],x[i]);
+    return z;
+}
+big operator-(big x,int y)	//only dcm=len
+{
+    big z; int i;
+    carry(&z[len],x[len]-y);
+    rtr(i,len-1,1) carry(&z[i],x[i]);
+    return z;
+}
+big operator*(big x,int y)	//only dcm=len
+{
+    big z; int i;
+    carry(&z[len],x[len]*y);
+    rtr(i,len-1,1) carry(&z[i],x[i]*y);
+    return z;
+}
+pair<big,int> operator/(big x,int y)	//only dcm=len
+{
+	big z; int d=0,i;  
+	tr(i,1,len) 
+    {
+    	z[i]=(d*10+x[i])/y;
+    	d=(d*10+x[i])%y;
+    }
+    return make_pair(z,d);
+}
 int sqrt_deal(big&y,int a,int b,int l)
 {
     int t=a+y[b]%10-9;
