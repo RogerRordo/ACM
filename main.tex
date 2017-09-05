@@ -221,6 +221,14 @@ $O(NlogN+QlogN)$
 $O(NlogN+QlogN)$
 \lstinputlisting{Template/bit2.cpp}
 
+\subsection{区间和\_区间修改区间查询-树状数组}
+差分得数列$d_i=a_i-a_{i-1}$，则
+\begin{equation*}
+\sum_{i=1}^xa_i=(x+1)\sum_{i=1}^xd_i-\sum_{i=1}^xi\cdot d_i
+\end{equation*}
+$O(NlogN+QlogN)$
+\lstinputlisting{Template/bit3.cpp}
+
 \subsection{区间和-线段树}
 $O(NlogN+QlogN)$
 \lstinputlisting{Template/segment_tree.cpp}

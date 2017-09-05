@@ -1,5 +1,5 @@
 int n,i,f[maxn];
-void modify(int x,int y)
+void add(int x,int y)
 {
     while (x) {f[x]+=y; x-=x&-x;}
 }
@@ -17,7 +17,7 @@ void work()
     tr(i,1,q)
     {
         tc=getchar();
-        if (tc=='M') {modify(read()-1,-1); modify(read(),1);}
+        if (tc=='M') {add(read()-1,-1); add(read(),1);}
         else writeln(sum(read()));
     }
 }

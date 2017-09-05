@@ -1,12 +1,5 @@
 //C是初始数列根（数组），c是修改根（树状数组）
-#include<bits/stdc++.h>
-#define tr(i,l,r) for(i=(l);i<=(r);i++)
-#define maxn 52000
-#define maxm 2100000
-#define maxq 12000
-using namespace std;
-
-int T,n,m,q,num,b[maxn],c[maxn],dc[maxn+maxq],sx,sy,lx[maxn],ly[maxn];
+int n,m,q,num,b[maxn],c[maxn],dc[maxn+maxq],sx,sy,lx[maxn],ly[maxn];
 int C[maxn];
 struct node{int l,r,size;} a[maxm];
 struct oper{int type,x,y,z;} op[maxq];
@@ -96,14 +89,4 @@ void work()
 			ly[++sy]=C[y];
 			printf("%d\n",dc[kth(1,num,z)]);
 		}
-}
-int main()
-{
-	scanf("%d",&T);
-	while (T--)
-	{
-		init();
-		work();
-	}
-	return 0;
 }
