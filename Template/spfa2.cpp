@@ -12,7 +12,7 @@ void spfa()
 	h=0; t=0;
 	while (num)
 	{
-		while (d[h]*num>sum)
+		while (d[h]*num>sum)    //?
 		{
 			t=(t+1)%n;
 			b[t]=b[h];
