@@ -79,6 +79,9 @@
 \subsection{一般母版}
 \lstinputlisting{Template/template.cpp}
 
+\subsection{fread}
+\lstinputlisting{Template/fread.cpp}
+
 \subsection{编译}
 \lstinputlisting{Template/compile.cpp}
 
@@ -156,10 +159,20 @@ $786433=3*2^{18}+1$原根是10，$880803841=105*2^{23}+1$原根是26
 \subsection{最长回文子串-Manacher}
 $O(N)$
 \lstinputlisting{Template/manacher.cpp}
+
 \subsection{多模匹配-AC自动机}
 求n个模式串中有多少个出现过，模式串相同算作多个，$O(\sum P_i+T)$
 \lstinputlisting{Template/aho_corasick.cpp}
+
 \subsection{后缀自动机}
+路径对应子串\\
+非克隆节点至少对应一个前缀\\
+子串endpos为出现位置末尾下标\\
+结点endpos一致\\
+结点内子串为连续的“子串区间”（k后缀所存在则相同\\
+suffixlink指向endpos增大最少的母集\\
+反向suffixlink构树是反前缀树\\
+endpos集合为反向suffixlink能走到的所有非克隆点的firstendpos\\
 \lstinputlisting{Template/sam.cpp}
 %==================================================
 \section{图/树}
