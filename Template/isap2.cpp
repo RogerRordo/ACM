@@ -1,17 +1,17 @@
-int n,mm,m,ans,last[maxn],cur[maxn],pre[maxn],d[maxn],gap[maxn],b[maxn];
+int n,mm,m,ans,ah[maxn],cur[maxn],pre[maxn],d[maxn],gap[maxn],b[maxn];
 bool p[maxn];
 struct edge{int x,y,c,f,pre;} a[2*maxm];
 void newedge(int x,int y,int c,int f)
 {
 	m++;
 	a[m].x=x; a[m].y=y; a[m].c=c; a[m].f=f;
-	a[m].pre=last[x]; last[x]=m;
+	a[m].pre=ah[x]; ah[x]=m;
 }
 void init()
 {
 	int i,x,y,c;
 	m=-1;
-	memset(last,-1,sizeof(last));
+	memset(ah,-1,sizeof(ah));
 	tr(i,1,mm)
 	{
 		x=read(); y=read(); c=read();
@@ -34,7 +34,7 @@ void bfs()
 	while (h<t)
 	{
 		h++;
-		for (e=last[b[h]];e!=-1;e=a[e].pre)
+		for (e=ah[b[h]];e!=-1;e=a[e].pre)
 			if (a[e].c==a[e].f && !p[a[e].y])
 			{
 				b[++t]=a[e].y;
@@ -51,7 +51,7 @@ void sap()
 	bfs();
 	tr(x,1,n) gap[d[x]]++;
 	ans=0;
-	tr(x,1,n) cur[x]=last[x];
+	tr(x,1,n) cur[x]=ah[x];
 	x=1; pre[1]=1; 
 	while (d[1]<n)
 	{
@@ -66,9 +66,9 @@ void sap()
 		if (e==-1)
 		{
 			if (!(--gap[d[x]])) return;
-			cur[x]=last[x];
+			cur[x]=ah[x];
 			d[x]=n;
-			for (e=last[x];e!=-1;e=a[e].pre)
+			for (e=ah[x];e!=-1;e=a[e].pre)
 				if (a[e].f<a[e].c) d[x]=min(d[x],d[a[e].y]+1);
 			gap[d[x]]++;
 			x=pre[x];

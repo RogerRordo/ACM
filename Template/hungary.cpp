@@ -1,9 +1,9 @@
 struct edge{int x,y,pre;} a[maxm];
-int nx,ny,m,last[maxn],my[maxn];
+int nx,ny,m,ah[maxn],my[maxn];
 bool p[maxn];
 int dfs(int x)
 {
-	for (int e=last[x];e>-1;e=a[e].pre)
+	for (int e=ah[x];e>-1;e=a[e].pre)
 		if (!p[a[e].y])
 		{
 			int y=a[e].y;

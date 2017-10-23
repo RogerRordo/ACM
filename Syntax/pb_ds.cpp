@@ -1,4 +1,4 @@
-using namespace __gnu_pbds
+using namespace __gnu_pbds;
 //-----------------------------------堆-----------------------------------
 #include<ext/pb_ds/priority_queue.hpp>
 template<

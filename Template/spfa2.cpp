@@ -1,6 +1,6 @@
 //a从1开始！
 struct edge{int pre,x,y,d;} a[maxm];
-int n,m,last[maxn],d[maxn],b[maxn];
+int n,m,ah[maxn],d[maxn],b[maxn];
 bool p[maxn];
 void spfa()
 {
@@ -18,7 +18,7 @@ void spfa()
 			b[t]=b[h];
 			h=(h+1)%n;
 		}
-		e=last[b[h]];
+		e=ah[b[h]];
 		p[b[h]]=0;
 		num--;
 		sum-=d[a[e].x];

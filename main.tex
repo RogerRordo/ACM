@@ -72,9 +72,12 @@
 % \date{}
 % \author{\textbf{RogerRo}}
 % \maketitle
+\pagenumbering{Roman}
 \tableofcontents
 \newpage
 %==================================================
+\pagenumbering{arabic}
+\setcounter{page}{1}
 \section{基础/配置/编译}
 \subsection{一般母版}
 \lstinputlisting{Template/template.cpp}
@@ -159,6 +162,10 @@ $786433=3*2^{18}+1$原根是10，$880803841=105*2^{23}+1$原根是26
 \subsection{最长回文子串-Manacher}
 $O(N)$
 \lstinputlisting{Template/manacher.cpp}
+
+\subsection{字符串匹配-KMP}
+$O(N)$
+\lstinputlisting{Template/kmp.cpp}
 
 \subsection{多模匹配-AC自动机}
 求n个模式串中有多少个出现过，模式串相同算作多个，$O(\sum P_i+T)$
@@ -320,6 +327,8 @@ $100000007$, $100200011$, $200100007$, $250000019$
 %\lstinputlisting{Syntax/complex.cpp}
 \subsubsection{pb\_ds}
 \lstinputlisting{Syntax/pb_ds.cpp}
+\subsubsection{rope}
+\lstinputlisting{Syntax/rope.cpp}
 \subsubsection{无头文件}
 \lstinputlisting{Syntax/c++.cpp}
 %==================================================

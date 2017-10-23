@@ -1,5 +1,5 @@
 struct edge{int pre,x,y,d;} a[maxm];
-int n,m,last[maxn],d[maxn],b[maxn];
+int n,m,ah[maxn],d[maxn],b[maxn];
 bool p[maxn];
 void spfa()
 {
@@ -11,7 +11,7 @@ void spfa()
 	while (h!=t)
 	{
 		h=(h+1)%n;
-		for (e=last[b[h]];e>-1;e=a[e].pre)
+		for (e=ah[b[h]];e>-1;e=a[e].pre)
 			if (d[a[e].x]+a[e].d<d[a[e].y])
 			{
 				d[a[e].y]=d[a[e].x]+a[e].d;

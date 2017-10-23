@@ -76,6 +76,16 @@ bool onray(point a,line b){return cmp((a-b.a)^b.dir())==0&&cmp((a-b.a)*b.dir())>
 bool onseg(point a,line b){return cmp((a-b.a)^b.dir())==0&&cmp((a-b.a)*(a-b.b))<=0;} //判断点在线段上
 bool online(point a,line b){return cmp((a-b.a)^b.dir())==0;} //判断点在直线上
 bool parallel(line a,line b){return cmp(a.dir()^b.dir())==0;}    //判断两线平行
+bool intersect(line a,line b)	//判断线段相交，精度比cross+onseg好
+{  
+    if (max(a.a.x,a.b.x)<min(b.a.x,b.b.x)) return 0;
+    if (max(a.a.y,a.b.y)<min(b.a.y,b.b.y)) return 0;
+	if (max(b.a.x,b.b.x)<min(a.a.x,a.b.x)) return 0;
+	if (max(b.a.y,b.b.y)<min(a.a.y,a.b.y)) return 0;
+	if (cmp(((b.a-a.a)^(a.b-a.a))*((a.b-a.a)^(b.b-a.a)))<0) return 0;
+	if (cmp(((a.a-b.a)^(b.b-b.a))*((b.b-b.a)^(a.b-b.a)))<0) return 0;
+    return 1;  
+}
 point cross(line a,line b)   //线交
 {
     double t;

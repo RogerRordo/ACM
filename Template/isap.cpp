@@ -1,23 +1,23 @@
 struct edge{int x,y,c,f,pre;} a[2*maxm];
-int n,mm,m,last[maxn],d[maxn],gap[maxn],cur[maxn],ans;
+int n,mm,m,ah[maxn],d[maxn],gap[maxn],cur[maxn],ans;
 void newedge(int x,int y,int c,int f)
 {
 	m++;
 	a[m].x=x; a[m].y=y; a[m].c=c; a[m].f=f;
-	a[m].pre=last[x]; last[x]=m;
+	a[m].pre=ah[x]; ah[x]=m;
 }
 void init()
 {
 	int i,x,y,c;
 	m=-1;
-	memset(last,-1,sizeof(last));
+	memset(ah,-1,sizeof(ah));
 	tr(i,1,mm)
 	{
 		x=read(); y=read(); c=read();
 		newedge(x,y,c,0);
 		newedge(y,x,c,c);
 	}
-	tr(i,1,n) cur[i]=last[i];
+	tr(i,1,n) cur[i]=ah[i];
     memset(d,0,sizeof(d));
 	memset(gap,0,sizeof(gap));
 	gap[0]=n;
@@ -38,9 +38,9 @@ int sap(int x,int flow)
 		}
 	if (--gap[d[x]]==0) d[n]=n;
 	d[x]=n;
-	for (e=last[x];e!=-1;e=a[e].pre)
+	for (e=ah[x];e!=-1;e=a[e].pre)
 		if (a[e].f<a[e].c) d[x]=min(d[x],d[a[e].y]+1);
-	cur[x]=last[x];	
+	cur[x]=ah[x];	
 	++gap[d[x]];
 	return 0;
 }
